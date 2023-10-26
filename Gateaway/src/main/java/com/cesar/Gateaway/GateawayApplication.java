@@ -11,15 +11,15 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class GateawayApplication {
 
-	
-	@Bean
-	public RouteLocator routes(RouteLocatorBuilder builder) {
+
+    @Bean
+    RouteLocator routes(RouteLocatorBuilder builder) {
 		
 		return builder.routes()
 				
 				.route( r -> r
 						.path("/books/**")
-						.uri( "http://localhost:8001" ))
+						.uri( "http://msvc-books" ))
 				.build();
 	}
 	
