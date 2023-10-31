@@ -11,4 +11,4 @@ spring:
           uri: https://github.com/CsarNarciso/Microservices-Spring-Boot
           defaultLabel: master
           search-paths: 
-            - Configs
+            - Configurations
