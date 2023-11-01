@@ -12,3 +12,8 @@ spring:
           defaultLabel: master
           search-paths: 
             - Configurations
+
+eureka:
+  client:
+    serviceUrl: 
+      defaultZone: http://localhost:8761/eureka/            

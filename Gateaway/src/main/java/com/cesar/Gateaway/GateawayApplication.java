@@ -19,7 +19,7 @@ public class GateawayApplication {
 				
 				.route( r -> r
 						.path("/books/**")
-						.uri( "http://msvc-books" ))
+						.uri( "lb://msvc-books" ))
 				.build();
 	}
 	

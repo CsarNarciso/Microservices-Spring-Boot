@@ -3,13 +3,15 @@ server:
 
 spring:
   application:
-    name: msvc-gateway  
+    name: msvc-gateway
   cloud:
-    gateway:
+    config:
       discovery:
-        locator:
-          enabled: true  
+        serviceId: msvc-configServer
+        enabled: true  
+ 
 eureka:
   client:
     serviceUrl: 
       defaultZone: http://localhost:8761/eureka/
+  
