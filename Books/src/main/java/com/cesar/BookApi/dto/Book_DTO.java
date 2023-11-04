@@ -6,6 +6,8 @@ public class Book_DTO {
 
 	private String name;
 
+	private Long editorialId;
+	
 	public Long getId() {
 		return id;
 	}
@@ -20,6 +22,14 @@ public class Book_DTO {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Long getEditorialId() {
+		return editorialId;
+	}
+
+	public void setEditorialId(Long editorialId) {
+		this.editorialId = editorialId;
 	}
 
 }
