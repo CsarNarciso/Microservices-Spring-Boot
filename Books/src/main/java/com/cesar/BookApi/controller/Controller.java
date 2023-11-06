@@ -41,7 +41,7 @@ public class Controller {
 	@GetMapping("/{editorialId}")
 	private ResponseEntity<?> getNamesByEditorialId(@PathVariable Long editorialId){
 		
-		List<String> foundBooks = books.stream().filter( b -> b.getEditorialId() != editorialId).map( b -> b.getName() ).toList();
+		List<String> foundBooks = books.stream().filter( b -> b.getEditorialId() == editorialId).map( b -> b.getName() ).toList();
 		
 		return ResponseEntity.ok( foundBooks );
 	}
