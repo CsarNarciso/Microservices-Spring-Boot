@@ -10,7 +10,7 @@ spring:
       discovery:
         serviceId: msvc-configServer
         enabled: true
-    
+
 eureka:
   client:
     serviceUrl: 

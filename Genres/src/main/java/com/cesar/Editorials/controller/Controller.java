@@ -17,7 +17,6 @@ import com.cesar.Editorials.feign.FeignBooks;
 @RestController
 @RequestMapping("/editorials")
 public class Controller {
-
 	
 	@RequestMapping("/{editorialId}")
 	private ResponseEntity<?> getBooksAndInfoFromEditorial(@PathVariable Long editorialId){
