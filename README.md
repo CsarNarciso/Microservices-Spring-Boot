@@ -1,3 +1,7 @@
+Project description.
+-
+I developed an RESTful application that handles books and literary genres data. The whole project uses a microservices architecture that ensures resilience and scalability.
+
 Application features.
 -
 - Two main REST APIs (Books, Genres). Both handle GET and POST HTTP methods.
