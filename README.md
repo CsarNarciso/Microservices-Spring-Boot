@@ -8,4 +8,20 @@ How it was built?
 - Implementation of Config Server to handle microservices configuration globally.
 - Use of FeignClient technology to connect Genres API request with Books API.
 - CircuitBreaker set up in OpenFeign for Books API requests failures. 
-- Tracing and monitoring system by Micrometer, Actuator and project Zipkin. 
+- Tracing and monitoring system by Micrometer, Actuator and project Zipkin.
+
+Complete technology stack.
+-
+- Spring Boot.
+- Java 1.7.
+- REST, microservices architecture.
+- JPA.
+- MySQL database.
+- Spring Cloud Netflix Eureka server.
+- API Gateway server.
+- Config server.
+- FeignClient.
+- CircuitBreaker.
+- Micrometer by Actuator project.
+- Zipkin.
+- Git.
