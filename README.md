@@ -1,7 +1,13 @@
+Application features.
+-
+- Two main REST APIs (Books, Genres), wich communicated to each other by FeignClient technology.
+- 
+- You can use the Books or Genres APIS through postman. 
+
 How it was built?
 -
 
-- The project uses two main REST APIs (Books, Genres), made with Spring Boot and JPA.
+- The APIs were made using Spring Boot and JPA Repositories.
 - MySQL database connection for persistence was made on two APIs.
 - I implement Netflix Eureka Server microservices to set up service discovery.
 - Uses Spring Cloud Gateway to handle HTTP requests/responses, this by service discovery via microservice id, not hostname and port (for best practices and security).
