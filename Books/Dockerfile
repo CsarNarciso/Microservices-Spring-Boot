@@ -1,4 +1,6 @@
-FROM openjdk:7	
-RUN ["mvn", "clean package"]
-COPY ./target/*.jar books.jar
-CMD ["java", "-jar", "*.jar"]
+FROM maven:latest	
+WORKDIR /app
+COPY . .
+RUN mvn clean package
+COPY ./target/BookApi-0.0.1.jar books.jar
+CMD ["java", "-jar", "books.jar"]

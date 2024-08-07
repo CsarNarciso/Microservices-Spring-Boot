@@ -1,40 +1,42 @@
 version: "3"
 services:
-  gateaway:
-    build: ./Gateaway
-    ports: 
-      - "8080:8080"
-    depends_on:
-      - config
-      - gateaway
-  books:
-    build: ./Books
-    ports: 
-      - "8001:8001"
-    depends_on:
-      - config
-      - gateaway
-      - mysqldb
-  genres:
-    build: ./Genres
-    ports:
-      - "8002:8002"
-    depends_on:
-      - config
-      - gateaway
-      - mysqldb
-  eureka:
+#  msvc-genres:
+#    build: ./Genres
+#    ports:
+#      - "8002:8002"
+#    depends_on:
+#      - msvc-config
+#      - msvc-eureka
+#      - msvc-gateaway
+##      - mysqldb
+#  msvc-books:
+#    build: ./Books
+#    ports: 
+#      - "8001:8001"
+#    depends_on:
+#      - msvc-config
+#      - msvc-eureka
+#      - msvc-gateaway
+##      - mysqldb
+#  msvc-gateaway:
+#    build: ./Gateaway
+#    ports: 
+#      - "8080:8080"
+#    depends_on:
+#      - msvc-config
+#      - msvc-eureka
+#  msvc-config:
+#    build: ./Config
+#    ports:
+#      - "8888:8888"
+#    depends_on:
+#      - msvc-eureka   
+  msvc-eureka:
     build: ./Eureka
     ports:
-      - ""
-  config:
-    build: ./Config
-    ports:
-      - ""
-    depends_on:
-      - eureka   
-  mysqldb:
-    image: mysql
-    enviroment:
-     - MYSQL_ROOT_PASSWORD=letmein
-     - MYSQL_DATABASE=microservices-project-db
+      - "8761:8761"
+#  mysqldb:
+#    image: mysql
+#    environment:
+#     - MYSQL_ROOT_PASSWORD=letmein
+#     - MYSQL_DATABASE=microservices-project-db
