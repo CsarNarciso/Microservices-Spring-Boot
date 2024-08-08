@@ -1,25 +1,25 @@
 version: "3"
 services:
-#  msvc-gateaway:
-#    build: ./Gateaway
-#    ports: 
-#      - "8080:8080"
-#    networks:
-#      - eureka-net
-#    depends_on:
-#      - msvc-eureka
-#      - msvc-config
-#      - msvc-books
-#      - msvc-genres
-#  msvc-genres:
-#    build: ./Genres
-#    ports:
-#      - "8002:8002"
-#    networks:
-#      - eureka-net	
-#    depends_on:
-#      - msvc-config
-#      - msvc-eureka
+  msvc-gateaway:
+    build: ./Gateaway
+    ports: 
+      - "8080:8080"
+    networks:
+      - eureka-net
+    depends_on:
+      - msvc-eureka
+      - msvc-config
+      - msvc-books
+      - msvc-genres
+  msvc-genres:
+    build: ./Genres
+    ports:
+      - "8002:8002"
+    networks:
+      - eureka-net	
+    depends_on:
+      - msvc-config
+      - msvc-eureka
   msvc-books:
     build: ./Books
     ports: 
@@ -27,16 +27,16 @@ services:
     networks:
       - eureka-net	
     depends_on:
-#      - msvc-config
+      - msvc-config
       - msvc-eureka
-#  msvc-config:
-#    build: ./Config
-#    ports:
-#      - "8888:8888"
-#    networks:
-#      - eureka-net
-#    depends_on:
-#      - msvc-eureka   
+  msvc-config:
+    build: ./Config
+    ports:
+      - "8888:8888"
+    networks:
+      - eureka-net
+    depends_on:
+      - msvc-eureka   
   msvc-eureka:
     build: ./Eureka
     ports:
