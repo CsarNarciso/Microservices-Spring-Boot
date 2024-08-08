@@ -1,42 +1,52 @@
 version: "3"
 services:
-#  msvc-genres:
-#    build: ./Genres
-#    ports:
-#      - "8002:8002"
-#    depends_on:
-#      - msvc-config
-#      - msvc-eureka
-#      - msvc-gateaway
-##      - mysqldb
-#  msvc-books:
-#    build: ./Books
-#    ports: 
-#      - "8001:8001"
-#    depends_on:
-#      - msvc-config
-#      - msvc-eureka
-#      - msvc-gateaway
-##      - mysqldb
 #  msvc-gateaway:
 #    build: ./Gateaway
 #    ports: 
 #      - "8080:8080"
+#    networks:
+#      - eureka-net
+#    depends_on:
+#      - msvc-eureka
+#      - msvc-config
+#      - msvc-books
+#      - msvc-genres
+#  msvc-genres:
+#    build: ./Genres
+#    ports:
+#      - "8002:8002"
+#    networks:
+#      - eureka-net	
 #    depends_on:
 #      - msvc-config
 #      - msvc-eureka
+  msvc-books:
+    build: ./Books
+    ports: 
+      - "8001:8001"
+    networks:
+      - eureka-net	
+    depends_on:
+#      - msvc-config
+      - msvc-eureka
 #  msvc-config:
 #    build: ./Config
 #    ports:
 #      - "8888:8888"
+#    networks:
+#      - eureka-net
 #    depends_on:
 #      - msvc-eureka   
   msvc-eureka:
     build: ./Eureka
     ports:
       - "8761:8761"
-#  mysqldb:
-#    image: mysql
-#    environment:
-#     - MYSQL_ROOT_PASSWORD=letmein
-#     - MYSQL_DATABASE=microservices-project-db
+    networks:
+      - eureka-net	  
+networks:
+  eureka-net:
+
+
+
+
+

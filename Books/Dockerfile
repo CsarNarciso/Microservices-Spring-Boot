@@ -1,6 +1,5 @@
-FROM maven:latest	
+FROM openjdk:17-jdk-alpine	
 WORKDIR /app
-COPY . .
-RUN mvn clean package
-COPY ./target/BookApi-0.0.1.jar books.jar
+ARG JAR_FILE=./target/*.jar
+COPY ${JAR_FILE} books.jar
 CMD ["java", "-jar", "books.jar"]

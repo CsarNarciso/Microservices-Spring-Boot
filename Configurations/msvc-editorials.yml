@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: msvc-genres
+    name: msvc-editorials
   cloud:
     openfeign:
       circuitbreaker:

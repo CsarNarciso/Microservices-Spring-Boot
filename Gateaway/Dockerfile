@@ -1,6 +1,5 @@
-FROM maven:latest
+FROM openjdk:17-jdk-alpine
 WORKDIR /app
-COPY . .	
-RUN mvn clean package
-COPY ./target/Gateaway-0.0.1.jar gateaway.jar
+ARG JAR_FILE=./target/*.jar
+COPY ${JAR_FILE} gateaway.jar
 CMD ["java", "-jar", "gateaway.jar"]
