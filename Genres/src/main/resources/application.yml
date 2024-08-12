@@ -12,7 +12,6 @@ spring:
         enabled: true
 #Postgres database
   datasource:
-    platform: postgres
     driverClassName: org.postgresql.Driver 
     url: jdbc:microservices-project-postgresSQL-server://microservices-project-db:5543/editorials
     username: root
