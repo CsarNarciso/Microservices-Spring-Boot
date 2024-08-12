@@ -29,6 +29,17 @@ How it was built?
 - Testing with Postman Client.
 - Version control by Git.
 
+How to use it
+-
+Download Docker compose
+Run Docker command to start building up: docker compose up
+
+
+Endpoints
+-
+Books
+Editorials
+
 Complete technology stack.
 -
 - Spring Boot.
