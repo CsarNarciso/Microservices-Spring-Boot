@@ -3,14 +3,24 @@ services:
   msvc-gateaway:
     build: ./Gateaway
     ports: 
-      - "8080:8080"
+      - "8000:8000"
     networks:
       - eureka-net
     depends_on:
-      - msvc-eureka
-      - msvc-config
-      - msvc-books
-      - msvc-genres
+      msvc-eureka:
+        condition: service_healthy
+      msvc-config:
+        condition: service_healthy
+      msvc-books:
+        condition: service_healthy
+      msvc-genres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8000/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
   msvc-genres:
     build: ./Genres
     ports:
@@ -18,8 +28,18 @@ services:
     networks:
       - eureka-net	
     depends_on:
-      - msvc-config
-      - msvc-eureka
+      msvc-config:
+        condition: service_healthy
+      msvc-eureka:
+        condition: service_healthy
+      msvc-books:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8002/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
   msvc-books:
     build: ./Books
     ports: 
@@ -27,8 +47,16 @@ services:
     networks:
       - eureka-net	
     depends_on:
-      - msvc-config
-      - msvc-eureka
+      msvc-eureka:
+        condition: service_healthy
+      msvc-config:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8001/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
   msvc-config:
     build: ./Config
     ports:
@@ -36,17 +64,27 @@ services:
     networks:
       - eureka-net
     depends_on:
-      - msvc-eureka   
+      msvc-eureka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8888/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
   msvc-eureka:
     build: ./Eureka
     ports:
       - "8761:8761"
     networks:
       - eureka-net	  
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8761/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
 networks:
   eureka-net:
-
-
-
 
 

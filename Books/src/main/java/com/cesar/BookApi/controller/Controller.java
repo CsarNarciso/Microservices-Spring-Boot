@@ -1,6 +1,6 @@
 package com.cesar.BookApi.controller;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -49,5 +49,9 @@ public class Controller {
 	
 	//---------------INSTNANCES-------------------
 
-	List<Book_DTO> books = new ArrayList<>();
+	List<Book_DTO> books = Arrays.asList(
+	
+			new Book_DTO((long)1, "The Magic World", (long) 1),
+			new Book_DTO((long)2, "The Cupcake Disaster", (long) 2)
+	);
 }

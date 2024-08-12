@@ -7,7 +7,18 @@ public class Book_DTO {
 	private String name;
 
 	private Long editorialId;
+
+	public Book_DTO() {
+		super();
+	}
 	
+	public Book_DTO(Long id, String name, Long editorialId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.editorialId = editorialId;
+	}
+
 	public Long getId() {
 		return id;
 	}
