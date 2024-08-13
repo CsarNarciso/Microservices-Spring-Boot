@@ -13,17 +13,12 @@ spring:
 #Postgres database
   datasource:
     driverClassName: org.postgresql.Driver 
-    url: jdbc:microservices-project-postgresSQL-server://microservices-project-db:5543/editorials
-    username: root
-    password: letmein 
   jpa:
-    hibernate:
-      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
-        dialect:
         format-sql: true 
-      show-sql: true
+    show-sql: true
 eureka:
   client:
     register-with-eureka: true
