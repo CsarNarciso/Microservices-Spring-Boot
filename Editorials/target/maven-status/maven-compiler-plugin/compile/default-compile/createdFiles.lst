@@ -1,0 +1,5 @@
+com/cesar/Editorials/dto/Editorial_DTO.class
+com/cesar/Editorials/feign/FeignBooks$Fallback.class
+com/cesar/Editorials/feign/FeignBooks.class
+com/cesar/Editorials/EditorialsApplication.class
+com/cesar/Editorials/controller/Controller.class
