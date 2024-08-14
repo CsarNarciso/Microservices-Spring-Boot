@@ -21,6 +21,7 @@ services:
       timeout: 5s
       retries: 5
   msvc-editorials:
+    container_name: msvc-editorials-c
     build: ./Editorials
     ports:
       - "8002:8002"
@@ -28,10 +29,10 @@ services:
       - eureka-net
       - postgres-db-net	
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db/db
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=letmein
-      - SPRING_JPA_HIBERNATE_DDL-AUTO=create-drop
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=${SPRING_JPA_HIBERNATE_DDL_AUTO}
     depends_on:
       postgres-db:
         condition: service_healthy
@@ -97,9 +98,9 @@ services:
     ports: 
       - "5432:5432"
     environment:
-      - POSTGRES_DB=db
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=letmein
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     networks:
       - postgres-db-net
     volumes:
