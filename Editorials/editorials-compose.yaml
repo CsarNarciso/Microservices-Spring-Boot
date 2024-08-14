@@ -1,0 +1,30 @@
+services:
+  msvc-editorials:
+    build: ./Editorials
+    ports:
+      - "8002:8002"
+    networks:
+      - eureka-net
+      - postgres-db-net	
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db/db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=letmein
+      - SPRING_JPA_HIBERNATE_DDL-AUTO=create-drop
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      msvc-config:
+        condition: service_healthy
+      msvc-eureka:
+        condition: service_healthy
+      msvc-books:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8002/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
+	  
+	  
