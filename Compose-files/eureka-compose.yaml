@@ -1,0 +1,14 @@
+services:
+  msvc-eureka:
+    build: ./Eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - eureka-net	  
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8761/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
+

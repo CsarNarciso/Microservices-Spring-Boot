@@ -7,10 +7,10 @@ services:
       - eureka-net
       - postgres-db-net	
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db/db
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=letmein
-      - SPRING_JPA_HIBERNATE_DDL-AUTO=create-drop
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=${SPRING_JPA_HIBERNATE_DDL_AUTO}
     depends_on:
       postgres-db:
         condition: service_healthy
@@ -26,5 +26,4 @@ services:
       interval: 20s
       timeout: 5s
       retries: 5
-	  
-	  
+
