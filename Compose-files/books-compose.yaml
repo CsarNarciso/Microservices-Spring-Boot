@@ -1,0 +1,19 @@
+services:
+  msvc-books:
+    build: ./Books
+    ports: 
+      - "8001:8001"
+    networks:
+      - eureka-net	
+    depends_on:
+      msvc-eureka:
+        condition: service_healthy
+      msvc-config:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "localhost:8001/actuator/health"]
+      start_period: 40s
+      interval: 20s
+      timeout: 5s
+      retries: 5
+

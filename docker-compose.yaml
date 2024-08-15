@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 services:
   msvc-gateaway:
     build: ./Gateaway
@@ -111,6 +112,8 @@ services:
       interval: 20s
       timeout: 5s
       retries: 5
+=======
+>>>>>>> multiple-compose-files-modularization
 networks:
   eureka-net:
   postgres-db-net: 
