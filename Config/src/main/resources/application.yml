@@ -7,6 +7,7 @@ spring:
   cloud:
     config:
       server:
+        prefix: /config
         git:
           uri: https://github.com/CsarNarciso/Microservices-Spring-Boot
           defaultLabel: master
