@@ -3,5 +3,5 @@
 .project
 .classpath
 
-#Build output directories
+#Build output files/directories
 **/target/
