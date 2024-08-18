@@ -1,1 +1,7 @@
+# Eclipse IDE specific files
 /.metadata/
+.project
+.classpath
+
+#Build output directories
+**/target/
