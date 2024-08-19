@@ -38,8 +38,8 @@ public class Controller {
 	
 	private List<Editorial_DTO> editorials = Arrays.asList(
 		
-		new Editorial_DTO(Long.valueOf(1), "Marianas Books", "That street"),	
-		new Editorial_DTO(Long.valueOf(2), "Sanchez Books", "Somewhere..")
+		new Editorial_DTO(Long.valueOf(1), "Ocean Editorials", "That street"),	
+		new Editorial_DTO(Long.valueOf(2), "Tree book!", "Somewhere..")
 	);
 	
 	@Autowired
