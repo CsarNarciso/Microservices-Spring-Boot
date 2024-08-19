@@ -3,7 +3,7 @@
 Developing a RESTful application that handles books and literary genres data. The whole project uses a microservices architecture that ensures resilience and scalability.
 
 ## Table of contents
-* [Tests](#tests)
+* [Something](#tests)
 
 
 ## Technologies
