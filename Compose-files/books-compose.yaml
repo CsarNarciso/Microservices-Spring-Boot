@@ -1,6 +1,6 @@
 services:
   msvc-books:
-    build: ./Books
+    image: csarnar/microservices-spring-boot-msvc-books
     ports: 
       - "8001:8001"
     networks:
