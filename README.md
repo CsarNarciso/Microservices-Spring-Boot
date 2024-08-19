@@ -81,7 +81,7 @@ Follow these steps to set up the project locally:
 ```bash
 http://localhost:8001/actuator/health
 ```
-* Get books and editorial info through editorial ID  
+* Get books and editorial info by editorial ID  
 ```bash
 http://localhost:8001/editorials/1
 ```
