@@ -29,19 +29,33 @@ To use this project you must have the following
 
 ### Running the application
 Follow the steps bellow to have this project up and running in your local environment
+
 1. **Clone the repository**
     ```bash 
     git clone https://github.com/CsarNarciso/Microservices-Spring-Boot 
     ```
-2. a
-3. a
-4. a  
+2. **Go to project root directory**
+   ```bash
+   cd Microservices-Spring-Boot/
+   ```
+3. **Build up the microservices**
+   ```bash
+   docker-compose up --build -d
+   ```
+   With this command Docker Compose will create and run each one of the Microservices Containers using their Images stored in DockerHub.
+
+   Take in mind that the **-d** flag allows you to run the Containers on the background, if you want to see Microservices logs use
+   ```docker logs microservice-container-name```
+
+### Using the application
+
+Now that all the Microservices are up and running, you can make use of Postman (or another REST Client) to access the following Endpoints
+
+#### Endpoints
+For Editorials API
+For Books API
 
 ## How to bild this project
-
-## Endpoints
-Books
-Editorials
 
 ## Tests
 
