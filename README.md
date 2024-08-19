@@ -48,7 +48,7 @@ Follow these steps to set up the project locally:
    ```
 3. **Build and start the microservices**
    ```bash
-   docker-compose up --build -d
+   docker-compose up -d
    ```
    This command will create and run each microservice container using its image stored in Docker Hub. The **-d** flag runs the containers in the background, to view the logs use:
    ```bash
@@ -65,15 +65,15 @@ Follow these steps to set up the project locally:
    ```bash
    docker ps
    ```
-7. Finally, for networks and volumes used by the project, use:
+7. For networks and volumes used by the project, use:
    ```bash
    docker network ls
    docker volume ls
-   ```
+   ``` 
 
 ### Using the Application
 
-With all microservices running, you can use a REST client like Postman or cURL to access the following endpoints:
+1. With all microservices running, you can use a REST client like Postman or cURL to access the following endpoints:
 
 #### Editorials API
 
@@ -96,6 +96,11 @@ http://localhost:8002/actuator/health
 ```bash
 http://localhost:8002/books/1
 ```
+
+2. Finally, to stop and remove from your system all the docker components created by the project, use:
+   ```bash
+  docker-compose down
+   ``` 
 
 ## How to Build this Project
 
