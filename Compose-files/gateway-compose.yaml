@@ -1,6 +1,6 @@
 services:
   msvc-gateaway:
-    build: ./Gateaway
+    image: csarnar/microservices-spring-boot-msvc-gateaway
     ports: 
       - "8000:8000"
     networks:
