@@ -1,6 +1,6 @@
 services:
   msvc-eureka:
-    build: ./Eureka
+    image: csarnar/microservices-spring-boot-msvc-eureka
     ports:
       - "8761:8761"
     networks:
