@@ -77,32 +77,24 @@ With all microservices running, you can use a REST client like Postman or cURL t
 
 #### Editorials API
 
-* Check Editorials service info
+* Check Editorials service health
 ```bash
-curl -X GET http://localhost:8001/editorials.api.v1/actuator/info
+http://localhost:8001/actuator/health
 ```
-* Get all editorials
+* Get books and editorial info through editorial ID  
 ```bash
-curl -X GET http://localhost:8001/editorials.api.v1
-```
-* Find editorial by ID  
-```bash
-curl -X GET http://localhost:8001/editorials.api.v1/1
+http://localhost:8001/editorials/1
 ```
 
 #### Books API
 
-* Check Books service info
+* Check Books service health
 ```bash
-curl -X GET http://localhost:8001/books.api.v1/actuator/info
+http://localhost:8002/actuator/health
 ```
-* Get all books
+* Find books by editorial ID
 ```bash
-curl -X GET http://localhost:8002/books.api.v1
-```
-* Find book by ID
-```bash
-curl -X GET http://localhost:8002/books.api.v1/1
+http://localhost:8002/books/1
 ```
 
 ## How to Build this Project
