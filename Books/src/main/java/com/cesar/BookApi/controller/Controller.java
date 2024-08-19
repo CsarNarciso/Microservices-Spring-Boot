@@ -51,7 +51,7 @@ public class Controller {
 
 	List<Book_DTO> books = Arrays.asList(
 	
-			new Book_DTO((long)1, "The Magic World", (long) 1),
-			new Book_DTO((long)2, "The Cupcake Disaster", (long) 2)
+			new Book_DTO((long)1, "Spring Boot Microservices, The Right Way", (long) 1),
+			new Book_DTO((long)2, "Java Master 8th Edition", (long) 2)
 	);
 }
