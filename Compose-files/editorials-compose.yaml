@@ -1,6 +1,6 @@
 services:
   msvc-editorials:
-    build: ./Editorials
+    image: csarnar/microservices-spring-boot-msvc-editorials
     ports:
       - "8002:8002"
     networks:
