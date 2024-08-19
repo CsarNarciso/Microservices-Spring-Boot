@@ -112,3 +112,5 @@ curl -X GET http://localhost:8002/books.api.v1/1
 
 ## Tests
 
+## Contact me
+* [LinkedIn](https://www.linkedin.com/in/cesar-pozol-narciso-b48727180/)
