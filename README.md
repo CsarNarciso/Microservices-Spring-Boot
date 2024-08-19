@@ -3,7 +3,13 @@
 Developing a RESTful application that handles books and literary genres data. The whole project uses a microservices architecture that ensures resilience and scalability.
 
 ## Table of contents
-* [Something](#tests)
+* [Technologies](#technologies)
+* [Getting started](#getting-started)
+* [Prerequisites](#prerequisites)
+* [Running the application](#running-the-application)
+* [Using the application](#using-the-application)
+* [How to build this project](#how-to-build-this-project)
+* [Tests](#tests)
 
 
 ## Technologies
@@ -15,9 +21,9 @@ Developing a RESTful application that handles books and literary genres data. Th
    + Hibernate
    + Actuator Project
 6. Spring Cloud:
-     + Netflix Eureka Server
-     + Config Server
-     + API Gateway Server
+   + Netflix Eureka Server
+   + Config Server
+   + API Gateway Server
 7. PostgreSQL
    
 ## Getting started
@@ -102,7 +108,7 @@ curl -X GET http://localhost:8002/books.api.v1
 curl -X GET http://localhost:8002/books.api.v1/1
 ```
 
-## How to bild this project
+## How to build this project
 
 ## Tests
 
