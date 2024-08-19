@@ -1,6 +1,6 @@
 services:
   msvc-config:
-    build: ./Config
+    image: csarnar/microservices-spring-boot-msvc-config
     ports:
       - "8888:8888"
     networks:
