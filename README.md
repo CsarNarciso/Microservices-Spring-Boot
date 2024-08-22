@@ -32,7 +32,6 @@ This project demonstrates a RESTful application for managing books and literary 
 ### Prerequisites
 To use this project, you must have the following installed:
 1. Git
-3. Maven 3.0+
 2. Docker Compose 
 
 ### Running the Application
@@ -98,9 +97,9 @@ http://localhost:8002/books/1
 ```
 
 2. Finally, to stop and remove from your system all the docker components created by the project, use:
-   ```bash
-  docker-compose down
-   ``` 
+ ```bash
+ docker-compose down
+ ```
 
 ## How to Build this Project
 
